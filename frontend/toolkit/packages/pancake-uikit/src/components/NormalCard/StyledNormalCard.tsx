@@ -46,7 +46,6 @@ export const StyledNormalCard = styled.div<StyledNormalCardProps>`
   border-radius: 12px !important;
   color: ${({ theme, isDisabled }) => theme.colors[isDisabled ? "textDisabled" : "menuText"]};
   position: relative;
-  background-image: linear-gradient(78.19deg, #33C6DE 9.16%, #4016ED 91.66%);
 
   &:before,
   &:after {
@@ -64,13 +63,9 @@ export const StyledNormalCard = styled.div<StyledNormalCardProps>`
 
   &:before {
     left: 15px;
-    background-color: #e300ff;
-    box-shadow: 0 0 160px 150px #153c8da1;
   }
   &:after {
     right: 15px;
-    background-color: #e300ff;
-    box-shadow: 0 0 160px 150px #153c8da1;
   }
 
   ${({ isActive }) =>
@@ -80,7 +75,7 @@ export const StyledNormalCard = styled.div<StyledNormalCardProps>`
       background-size: 400% 400%;
     `}
 
-  padding: 1px 1px 3px 1px;
+  padding: 1px 1px 1px 1px;
   
   ${space}
 `;
@@ -90,7 +85,6 @@ export const StyledNormalCardInner = styled(Box)<{ background?: string; hasCusto
   height: 100%;
   overflow: ${({ hasCustomBorder }) => (hasCustomBorder ? "initial" : "inherit")};
   background: #02132F;
-  background-image: radial-gradient(80% 80% at 50% 50%, #084A9E 0%, #0A3C79 31.25%, rgba(10, 59, 121, 0) 100%);
   border-radius: ${({ theme }) => theme.radii.card};
 `;
 

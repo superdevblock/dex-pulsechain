@@ -370,7 +370,7 @@ it("renders correctly", () => {
     }
 
     .c20 {
-      color: #FFB237;
+      color: #2B200F;
       font-size: 14px;
       font-weight: 400;
       line-height: 1.5;
@@ -640,9 +640,9 @@ it("renders correctly", () => {
       border-radius: 16px;
       padding: 0 8px;
       border: 2px solid;
-      border-color: #FFB237;
+      border-color: #2B200F;
       box-shadow: none;
-      color: #FFB237;
+      color: #2B200F;
       margin-left: 8px;
     }
 

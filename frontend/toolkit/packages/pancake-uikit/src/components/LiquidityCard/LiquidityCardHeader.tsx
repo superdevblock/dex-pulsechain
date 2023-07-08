@@ -7,7 +7,7 @@ export interface LiquidityCardHeaderProps extends SpaceProps {
 }
 
 const LiquidityCardHeader = styled.div<LiquidityCardHeaderProps>`
-  background: #052148;
+  border: #0553a1 1px solid;
   border-radius: ${({ theme }) => `${theme.radii.card} ${theme.radii.card} 0 0`};
   ${space}
 `;

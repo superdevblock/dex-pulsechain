@@ -15,7 +15,6 @@ interface Props extends PanelProps, PushedProps {
 const Icons = IconModule as unknown as { [key: string]: React.FC<SvgProps> };
 
 const Container = styled.div`
-background: radial-gradient(100% 52% at 6% 35%,#094490a0 0%,#000A1Aa0 91.25%,rgba(10,59,121,0) 100%);
   display: flex;
   flex-direction: column;
   overflow-y: auto;
@@ -82,9 +81,9 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
           </MenuEntry>
         );
       })}
-      <div style={{ position: "absolute", width: "13px", height: "400px", zIndex: -2, marginTop: "315px", marginLeft: "-3px", transform: "rotate(300deg)",  background: "radial-gradient(33.74% 42.58% at 60.66% 50%, #FFFFFF 0%, #CDFFFC 15.62%, #1EF6E9 36.46%, #14AAC6 47.92%, #0866B5 67.71%, rgba(8, 102, 181, 0) 100%)" }} />
+      {/* <div style={{ position: "absolute", width: "13px", height: "400px", zIndex: -2, marginTop: "315px", marginLeft: "-3px", transform: "rotate(300deg)",  background: "radial-gradient(33.74% 42.58% at 60.66% 50%, #FFFFFF 0%, #CDFFFC 15.62%, #1EF6E9 36.46%, #14AAC6 47.92%, #0866B5 67.71%, rgba(8, 102, 181, 0) 100%)" }} />
       <div style={{ position: "absolute", width: "13px", height: "400px", zIndex: -2, marginTop: "320px", marginLeft: "22px", transform: "rotate(300deg)", opacity:"0.5" , background: "radial-gradient(33.74% 42.58% at 60.66% 50%, #FFFFFF 0%, #CDFFFC 15.62%, #1EF6E9 36.46%, #14AAC6 47.92%, #0866B5 67.71%, rgba(8, 102, 181, 0) 100%)" }} />
-      <div style={{ position: "absolute", width: "13px", height: "400px", zIndex: -2, marginTop: "317px", marginLeft: "-40px", transform: "rotate(300deg)", opacity: "0.3", background: "radial-gradient(33.74% 42.58% at 60.66% 50%, #FFFFFF 0%, #CDFFFC 15.62%, #1EF6E9 36.46%, #14AAC6 47.92%, #0866B5 67.71%, rgba(8, 102, 181, 0) 100%)" }} />
+      <div style={{ position: "absolute", width: "13px", height: "400px", zIndex: -2, marginTop: "317px", marginLeft: "-40px", transform: "rotate(300deg)", opacity: "0.3", background: "radial-gradient(33.74% 42.58% at 60.66% 50%, #FFFFFF 0%, #CDFFFC 15.62%, #1EF6E9 36.46%, #14AAC6 47.92%, #0866B5 67.71%, rgba(8, 102, 181, 0) 100%)" }} /> */}
     </Container>
   );
 };

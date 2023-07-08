@@ -2,12 +2,12 @@ import { Colors } from "./types";
 
 export const baseColors = {
   failure: "#ED4B9E",
-  primary: "#278CC7",
+  primary: "#B29943",
   primaryBright: "#53DEE9",
   primaryDark: "#0098A1",
   secondary: "#7645D9",
   success: "#0283e6",
-  warning: "#FFB237",
+  warning: "#B29943",
 };
 
 export const additionalColors = {
@@ -62,12 +62,12 @@ export const darkColors: Colors = {
   invertedContrast: "#0a0e17",
   input: "#1f3c68",
   inputSecondary: "#0553a1",
-  primaryDark: "#278CC7",
+  primaryDark: "#B29943",
   tertiary: "#1f3c68",
-  text: "#278CC7",
-  menuText: "#00dbe3",
+  text: "#B29943",
+  menuText: "#e3d591",
   textDisabled: "#ffffff33;",
-  textSubtle: "#278CC7",
+  textSubtle: "#B29943",
   disabled: "#ffffff1a",
   gradients: {
     bubblegum: "none",

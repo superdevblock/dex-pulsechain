@@ -145,7 +145,7 @@ const App: React.FC = () => {
             <Route exact strict path="/remove/:tokens" component={RedirectOldRemoveLiquidityPathStructure} />
             <Route exact strict path="/remove/:currencyIdA/:currencyIdB" component={RemoveLiquidity} />
 
-            {/* Redirect */}
+            {/* Redirect */}  
             <Route path="/pool">
               <Redirect to="/liquidity" />
             </Route>

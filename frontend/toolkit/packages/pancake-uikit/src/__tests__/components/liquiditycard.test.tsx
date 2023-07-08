@@ -18,7 +18,7 @@ it("renders correctly", () => {
       color: #280D5F;
       overflow: hidden;
       position: relative;
-      padding: 1px 1px 3px 1px;
+      padding: 1px 1px 1px 1px;
     }
 
     .c1 {

@@ -12,6 +12,7 @@ const ConnectWalletButton = (props) => {
     <Button onClick={onPresentConnectModal} {...props}>
       {t('Connect Wallet')}
     </Button>
+    
   )
 }
 

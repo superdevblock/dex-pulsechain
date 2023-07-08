@@ -46,11 +46,11 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
     icon: 'InfoIcon',
     href: '/info',
   },
-  {
-    label: t('Launchpad'),
-    icon: 'IfoIcon',
-    href: 'https://gaspad.io/'
-  }, 
+  // {
+  //   label: t('Launchpad'),
+  //   icon: 'IfoIcon',
+  //   href: 'https://gaspad.io/'
+  // }, 
   // {
   //   label: t('Referral'),
   //   icon: 'ReferralIcon',
@@ -100,36 +100,36 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
   //   ],
   // },
  
-  {
-    label: t('More'),
-    icon: 'MoreIcon',
-    items: [
-      // {
-      //   label: t('Contact'),
-      //   href: 'https://docs.pancakeswap.finance/contact-us',
-      // },
-      // {
-      //   label: t('Voting'),
-      //   href: '/voting',
-      // },
-      {
-        label: t('Github'),
-        href: 'https://github.com/flamez-io',
-      },
-      {
-        label: t('Whitepaper'),
-        href: 'http://docs.flamez.io/',
-      },
-      // {
-      //   label: t('SolidProof'),
-      //   href: 'https://solidproof.io/',
-      // },
-      // {
-      //   label: t('Merch'),
-      //   href: 'https://pancakeswap.creator-spring.com/',
-      // },
-    ],
-  },
+  // {
+  //   label: t('More'),
+  //   icon: 'MoreIcon',
+  //   items: [
+  //     // {
+  //     //   label: t('Contact'),
+  //     //   href: 'https://docs.pancakeswap.finance/contact-us',
+  //     // },
+  //     // {
+  //     //   label: t('Voting'),
+  //     //   href: '/voting',
+  //     // },
+  //     {
+  //       label: t('Github'),
+  //       href: 'https://github.com/flamez-io',
+  //     },
+  //     // {
+  //     //   label: t('Whitepaper'),
+  //     //   href: 'http://docs.flamez.io/',
+  //     // },
+  //     // {
+  //     //   label: t('SolidProof'),
+  //     //   href: 'https://solidproof.io/',
+  //     // },
+  //     // {
+  //     //   label: t('Merch'),
+  //     //   href: 'https://pancakeswap.creator-spring.com/',
+  //     // },
+  //   ],
+  // },
 ]
 
 export default config
