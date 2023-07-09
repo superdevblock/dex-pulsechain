@@ -14,8 +14,11 @@ frontend/build
 
 subgraph/node_modules
 
-contract/node_modules
-contract/.env
+contracts/node_modules
+contracts/.env
+contracts/.openzeppelin
+contracts/artifacts
+contracts/cache
 
 # misc
 .DS_Store
