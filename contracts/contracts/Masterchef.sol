@@ -1056,13 +1056,13 @@ contract MasterChef is Ownable {
         uint256 rewardDebt; // Reward debt. See explanation below.
         address referral;
         //
-        // We do some fancy math here. Basically, any point in time, the amount of FLAMEZs
+        // We do some fancy math here. Basically, any point in time, the amount of Dudes
         // entitled to a user but is pending to be distributed is:
         //
-        //   pending reward = (user.amount * pool.accFlamezPerShare) - user.rewardDebt
+        //   pending reward = (user.amount * pool.accDudePerShare) - user.rewardDebt
         //
         // Whenever a user deposits or withdraws LP tokens to a pool. Here's what happens:
-        //   1. The pool's `accFlamezPerShare` (and `lastRewardBlock`) gets updated.
+        //   1. The pool's `accDudePerShare` (and `lastRewardBlock`) gets updated.
         //   2. User receives the pending reward sent to his/her address.
         //   3. User's `amount` gets updated.
         //   4. User's `rewardDebt` gets updated.
@@ -1071,18 +1071,18 @@ contract MasterChef is Ownable {
     // Info of each pool.
     struct PoolInfo {
         IBEP20 lpToken; // Address of LP token contract.
-        uint256 allocPoint; // How many allocation points assigned to this pool. FLAMEZs to distribute per block.
-        uint256 lastRewardBlock; // Last block number that FLAMEZs distribution occurs.
-        uint256 accFlamezPerShare; // Accumulated FLAMEZs per share, times 1e12. See below.
+        uint256 allocPoint; // How many allocation points assigned to this pool. Dudes to distribute per block.
+        uint256 lastRewardBlock; // Last block number that Dudes distribution occurs.
+        uint256 accDudePerShare; // Accumulated Dudes per share, times 1e12. See below.
     }
 
-    // The FLAMEZ TOKEN!
-    IBEP20 public flamez;
+    // The Dude TOKEN!
+    IBEP20 public Dude;
     // Dev address.
     address public devaddr;
-    // FLAMEZ tokens created per block.
-    uint256 public flamezPerBlock;
-    // Bonus muliplier for early flamez makers.
+    // Dude tokens created per block.
+    uint256 public DudePerBlock;
+    // Bonus muliplier for early Dude makers.
     uint256 public BONUS_MULTIPLIER = 1;
     // The migrator contract. It has a lot of power. Can only be set through governance (owner).
     IMigratorChef public migrator;
@@ -1095,7 +1095,7 @@ contract MasterChef is Ownable {
     mapping(uint256 => mapping(address => UserInfo)) public userInfo;
     // Total allocation poitns. Must be the sum of all allocation points in all pools.
     uint256 public totalAllocPoint = 0;
-    // The block number when FLAMEZ mining starts.
+    // The block number when Dude mining starts.
     uint256 public startBlock;
 
     event Deposit(address indexed user, uint256 indexed pid, uint256 amount);
@@ -1107,23 +1107,23 @@ contract MasterChef is Ownable {
     );
 
     constructor(
-        IBEP20 _flamez,
+        IBEP20 _Dude,
         address _devaddr,
-        uint256 _flamezPerBlock,
+        uint256 _DudePerBlock,
         uint256 _startBlock
     ) public {
-        flamez = _flamez;
+        Dude = _Dude;
         devaddr = _devaddr;
-        flamezPerBlock = _flamezPerBlock;
+        DudePerBlock = _DudePerBlock;
         startBlock = _startBlock;
 
         // staking pool
         poolInfo.push(
             PoolInfo({
-                lpToken: _flamez,
+                lpToken: _Dude,
                 allocPoint: 1000,
                 lastRewardBlock: startBlock,
-                accFlamezPerShare: 0
+                accDudePerShare: 0
             })
         );
 
@@ -1159,14 +1159,14 @@ contract MasterChef is Ownable {
                 lpToken: _lpToken,
                 allocPoint: _allocPoint,
                 lastRewardBlock: lastRewardBlock,
-                accFlamezPerShare: 0
+                accDudePerShare: 0
             })
         );
         poolExist[address(_lpToken)] = true;
         updateStakingPool();
     }
 
-    // Update the given pool's FLAMEZ allocation point. Can only be called by the owner.
+    // Update the given pool's Dude allocation point. Can only be called by the owner.
     function set(
         uint256 _pid,
         uint256 _allocPoint,
@@ -1225,30 +1225,29 @@ contract MasterChef is Ownable {
         return _to.sub(_from).mul(BONUS_MULTIPLIER);
     }
 
-    // View function to see pending FLAMEZs on frontend.
-    function pendingFlamez(
+    // View function to see pending Dudes on frontend.
+    function pendingDude(
         uint256 _pid,
         address _user
     ) external view returns (uint256) {
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][_user];
-        uint256 accFlamezPerShare = pool.accFlamezPerShare;
+        uint256 accDudePerShare = pool.accDudePerShare;
         uint256 lpSupply = pool.lpToken.balanceOf(address(this));
         if (block.number > pool.lastRewardBlock && lpSupply != 0) {
             uint256 multiplier = getMultiplier(
                 pool.lastRewardBlock,
                 block.number
             );
-            uint256 flamezReward = multiplier
-                .mul(flamezPerBlock)
+            uint256 DudeReward = multiplier
+                .mul(DudePerBlock)
                 .mul(pool.allocPoint)
                 .div(totalAllocPoint);
-            accFlamezPerShare = accFlamezPerShare.add(
-                flamezReward.mul(1e12).div(lpSupply)
+            accDudePerShare = accDudePerShare.add(
+                DudeReward.mul(1e12).div(lpSupply)
             );
         }
-        return
-            user.amount.mul(accFlamezPerShare).div(1e12).sub(user.rewardDebt);
+        return user.amount.mul(accDudePerShare).div(1e12).sub(user.rewardDebt);
     }
 
     // Update reward variables for all pools. Be careful of gas spending!
@@ -1271,19 +1270,19 @@ contract MasterChef is Ownable {
             return;
         }
         uint256 multiplier = getMultiplier(pool.lastRewardBlock, block.number);
-        uint256 flamezReward = multiplier
-            .mul(flamezPerBlock)
+        uint256 DudeReward = multiplier
+            .mul(DudePerBlock)
             .mul(pool.allocPoint)
             .div(totalAllocPoint);
-        pool.accFlamezPerShare = pool.accFlamezPerShare.add(
-            flamezReward.mul(1e12).div(lpSupply)
+        pool.accDudePerShare = pool.accDudePerShare.add(
+            DudeReward.mul(1e12).div(lpSupply)
         );
         pool.lastRewardBlock = block.number;
     }
 
-    // Deposit LP tokens to MasterChef for FLAMEZ allocation.
+    // Deposit LP tokens to MasterChef for Dude allocation.
     function deposit(uint256 _pid, uint256 _amount, address _referral) public {
-        require(_pid != 0, "deposit FLAMEZ by staking");
+        require(_pid != 0, "deposit Dude by staking");
 
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][msg.sender];
@@ -1291,11 +1290,11 @@ contract MasterChef is Ownable {
         if (user.amount > 0) {
             uint256 pending = user
                 .amount
-                .mul(pool.accFlamezPerShare)
+                .mul(pool.accDudePerShare)
                 .div(1e12)
                 .sub(user.rewardDebt);
             if (pending > 0) {
-                safeFlamezTransfer(msg.sender, pending, user.referral);
+                safeDudeTransfer(msg.sender, pending, user.referral);
             }
         }
         if (_amount > 0) {
@@ -1308,7 +1307,7 @@ contract MasterChef is Ownable {
             uint256 afterBalance = pool.lpToken.balanceOf(address(this));
             user.amount = user.amount.add(afterBalance.sub(preBalance));
         }
-        user.rewardDebt = user.amount.mul(pool.accFlamezPerShare).div(1e12);
+        user.rewardDebt = user.amount.mul(pool.accDudePerShare).div(1e12);
         if (user.referral == address(0x0)) {
             user.referral = _referral;
         }
@@ -1317,28 +1316,28 @@ contract MasterChef is Ownable {
 
     // Withdraw LP tokens from MasterChef.
     function withdraw(uint256 _pid, uint256 _amount) public {
-        require(_pid != 0, "withdraw FLAMEZ by unstaking");
+        require(_pid != 0, "withdraw Dude by unstaking");
 
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][msg.sender];
 
         require(user.amount >= _amount, "withdraw: not good");
         updatePool(_pid);
-        uint256 pending = user.amount.mul(pool.accFlamezPerShare).div(1e12).sub(
+        uint256 pending = user.amount.mul(pool.accDudePerShare).div(1e12).sub(
             user.rewardDebt
         );
         if (pending > 0) {
-            safeFlamezTransfer(msg.sender, pending, user.referral);
+            safeDudeTransfer(msg.sender, pending, user.referral);
         }
         if (_amount > 0) {
             user.amount = user.amount.sub(_amount);
             pool.lpToken.safeTransfer(address(msg.sender), _amount);
         }
-        user.rewardDebt = user.amount.mul(pool.accFlamezPerShare).div(1e12);
+        user.rewardDebt = user.amount.mul(pool.accDudePerShare).div(1e12);
         emit Withdraw(msg.sender, _pid, _amount);
     }
 
-    // Stake FLAMEZ tokens to MasterChef
+    // Stake Dude tokens to MasterChef
     function enterStaking(uint256 _amount, address _referral) public {
         PoolInfo storage pool = poolInfo[0];
         UserInfo storage user = userInfo[0][msg.sender];
@@ -1346,11 +1345,11 @@ contract MasterChef is Ownable {
         if (user.amount > 0) {
             uint256 pending = user
                 .amount
-                .mul(pool.accFlamezPerShare)
+                .mul(pool.accDudePerShare)
                 .div(1e12)
                 .sub(user.rewardDebt);
             if (pending > 0) {
-                safeFlamezTransfer(msg.sender, pending, user.referral);
+                safeDudeTransfer(msg.sender, pending, user.referral);
             }
         }
         if (_amount > 0) {
@@ -1363,30 +1362,30 @@ contract MasterChef is Ownable {
             uint256 afterBalance = pool.lpToken.balanceOf(address(this));
             user.amount = user.amount.add(afterBalance.sub(preBalance));
         }
-        user.rewardDebt = user.amount.mul(pool.accFlamezPerShare).div(1e12);
+        user.rewardDebt = user.amount.mul(pool.accDudePerShare).div(1e12);
         if (user.referral == address(0x0)) {
             user.referral = _referral;
         }
         emit Deposit(msg.sender, 0, _amount);
     }
 
-    // Withdraw FLAMEZ tokens from STAKING.
+    // Withdraw Dude tokens from STAKING.
     function leaveStaking(uint256 _amount) public {
         PoolInfo storage pool = poolInfo[0];
         UserInfo storage user = userInfo[0][msg.sender];
         require(user.amount >= _amount, "withdraw: not good");
         updatePool(0);
-        uint256 pending = user.amount.mul(pool.accFlamezPerShare).div(1e12).sub(
+        uint256 pending = user.amount.mul(pool.accDudePerShare).div(1e12).sub(
             user.rewardDebt
         );
         if (pending > 0) {
-            safeFlamezTransfer(msg.sender, pending, user.referral);
+            safeDudeTransfer(msg.sender, pending, user.referral);
         }
         if (_amount > 0) {
             user.amount = user.amount.sub(_amount);
             pool.lpToken.safeTransfer(address(msg.sender), _amount);
         }
-        user.rewardDebt = user.amount.mul(pool.accFlamezPerShare).div(1e12);
+        user.rewardDebt = user.amount.mul(pool.accDudePerShare).div(1e12);
 
         emit Withdraw(msg.sender, 0, _amount);
     }
@@ -1410,18 +1409,18 @@ contract MasterChef is Ownable {
         IBEP20(tokenAddress).approve(spender, amount);
     }
 
-    // Safe flamez transfer function, just in case if rounding error causes pool to not have enough FLAMEZs.
-    function safeFlamezTransfer(
+    // Safe Dude transfer function, just in case if rounding error causes pool to not have enough Dudes.
+    function safeDudeTransfer(
         address _to,
         uint256 _amount,
         address _referral
     ) internal {
-        flamez.transfer(devaddr, _amount.mul(10).div(100));
+        Dude.transfer(devaddr, _amount.mul(10).div(100));
         if (_referral != address(0x0)) {
-            flamez.transfer(_to, _amount.mul(90).div(100));
+            Dude.transfer(_to, _amount.mul(90).div(100));
         } else {
-            flamez.transfer(_referral, _amount.mul(3).div(100));
-            flamez.transfer(_to, _amount.mul(87).div(100));
+            Dude.transfer(_referral, _amount.mul(3).div(100));
+            Dude.transfer(_to, _amount.mul(87).div(100));
         }
     }
 
@@ -1431,7 +1430,7 @@ contract MasterChef is Ownable {
         devaddr = _devaddr;
     }
 
-    function updateFlamezPerBlock(uint256 _flamezPerBlock) external onlyOwner {
-        flamezPerBlock = _flamezPerBlock;
+    function updateDudePerBlock(uint256 _DudePerBlock) external onlyOwner {
+        DudePerBlock = _DudePerBlock;
     }
 }

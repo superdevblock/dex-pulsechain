@@ -20,6 +20,12 @@ contracts/.openzeppelin
 contracts/artifacts
 contracts/cache
 
+keeswap/kee-swap-core/node_modules
+keeswap/keeswap-front/node_modules
+keeswap/kee-swap-sdk/node_modules
+keeswap/keeswap-token/node_modules
+keeswap/keeswap-ToolKit/node_modules
+
 # misc
 .DS_Store
 .env.local
