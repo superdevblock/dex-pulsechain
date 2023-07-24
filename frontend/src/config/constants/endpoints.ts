@@ -15,9 +15,5 @@ export const GRAPH_API_PREDICTION_V1 = 'https://api.thegraph.com/subgraphs/name/
 // export const BLOCKS_CLIENT = 'https://dynograph.io/subgraphs/name/blocks' // 'http://66.165.225.90:1111/subgraphs/name/blocks' // https://api.thegraph.com/subgraphs/name/pancakeswap/blocks
 // export const INFO_CLIENT = 'https://subgraphs.butane.tech/subgraphs/name/exchange'
 // export const BLOCKS_CLIENT = 'https://subgraphs.butane.tech/subgraphs/name/blocks'
-
-// export const INFO_CLIENT = 'http://127.0.0.1:8000/subgraphs/name/exchange/graphql'
-// export const BLOCKS_CLIENT = 'http://127.0.0.1:8000/subgraphs/name/blocks'
-
 export const INFO_CLIENT = 'https://dude.goextmx.com/subgraphs/name/exchange'
 export const BLOCKS_CLIENT = 'https://dude.goextmx.com/subgraphs/name/blocks'

@@ -3,7 +3,7 @@ import { getAddress } from 'utils/addressHelpers'
 describe('getAddress', () => {
   const address = {
     56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
-    943: '0x52cd33c4c0CA3d0eD69Eff8cf423e4eBc3cBee27',
+    369: '0x52cd33c4c0CA3d0eD69Eff8cf423e4eBc3cBee27',
   }
 
   it(`get address for mainnet (chainId 56)`, () => {

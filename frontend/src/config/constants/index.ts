@@ -1,7 +1,7 @@
 import { ChainId, JSBI, Percent, Token, WETH } from '@pancakeswap/sdk'
-import { DAI, CAKE, WBNB, tDAI, FILGOB } from './tokens'
+import { DAI, CAKE, WBNB, FILGOB, TPA } from './tokens'
 
-export const ROUTER_ADDRESS = '0x636f6407B90661b73b1C0F7e24F4C79f624d0738'
+export const ROUTER_ADDRESS = '0x165C3410fC91EF562C50559f7d2289fEbed552d9'
 
 // a list of tokens by chain
 type ChainTokenList = {
@@ -10,7 +10,7 @@ type ChainTokenList = {
 
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
-  [ChainId.MAINNET]: [WETH[ChainId.MAINNET], CAKE[ChainId.MAINNET], tDAI, ],
+  [ChainId.MAINNET]: [WETH[ChainId.MAINNET], CAKE[ChainId.MAINNET], DAI, TPA],
   [ChainId.TESTNET]: [WETH[ChainId.TESTNET], CAKE[ChainId.TESTNET] ],
 }
 
@@ -33,20 +33,20 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
-  [ChainId.MAINNET]: [tDAI, CAKE[ChainId.MAINNET], FILGOB],
+  [ChainId.MAINNET]: [DAI, CAKE[ChainId.MAINNET], FILGOB],
   [ChainId.TESTNET]: [WETH[ChainId.TESTNET], CAKE[ChainId.TESTNET], ],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
-  [ChainId.MAINNET]: [WETH[ChainId.MAINNET], tDAI],
+  [ChainId.MAINNET]: [WETH[ChainId.MAINNET], DAI],
   [ChainId.TESTNET]: [WETH[ChainId.TESTNET], CAKE[ChainId.TESTNET],],
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
   [ChainId.MAINNET]: [
     [CAKE[ChainId.MAINNET], WBNB],
-    [tDAI, WBNB],
+    [DAI, WBNB],
   ],
 }
 

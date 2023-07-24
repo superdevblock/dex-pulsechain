@@ -2,7 +2,7 @@ import BigNumber from 'bignumber.js'
 import { SerializedBigNumber, TranslatableText } from 'state/types'
 
 export interface Address {
-  943: string
+  369: string
   56: string
 }
 

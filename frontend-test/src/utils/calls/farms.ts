@@ -7,9 +7,11 @@ const options = {
 }
 
 export const stakeFarm = async (masterChefContract, pid, amount, referral) => {
+  console.log("arsinoe : stakeFarm")
   const gasPrice = getGasPrice()
   const value = new BigNumber(amount).times(DEFAULT_TOKEN_DECIMAL).toString()
   if (pid === 0) {
+    console.log(value, referral, { ...options, gasPrice })
     const tx = await masterChefContract.enterStaking(value, referral, { ...options, gasPrice })
     const receipt = await tx.wait()
     return receipt.status

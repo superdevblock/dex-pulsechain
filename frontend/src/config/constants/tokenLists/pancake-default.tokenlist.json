@@ -13,34 +13,50 @@
     {
       "name": "WPLS Token",
       "symbol": "WPLS",
-      "address": "0x70499adebb11efd915e3b69e700c331778628707",
-      "chainId": 943,
+      "address": "0xA1077a294dDE1B09bB078844df40758a5D0f9a27",
+      "chainId": 369,
       "decimals": 18,
-      "logoURI": "/images/tokens/0x70499adebb11efd915e3b69e700c331778628707.png"
+      "logoURI": "/images/tokens/0xA1077a294dDE1B09bB078844df40758a5D0f9a27.png"
     },
     {
-      "name": "tDAI Token",
-      "symbol": "tDAI",
-      "address": "0x826e4e896CC2f5B371Cd7Bb0bd929DB3e3DB67c0",
-      "chainId": 943,
+      "name": "DAI Token",
+      "symbol": "DAI",
+      "address": "0xefD766cCb38EaF1dfd701853BFCe31359239F305",
+      "chainId": 369,
       "decimals": 18,
-      "logoURI": "/images/tokens/0x826e4e896CC2f5B371Cd7Bb0bd929DB3e3DB67c0.png"
+      "logoURI": "/images/tokens/0xefD766cCb38EaF1dfd701853BFCe31359239F305.png"
     },
     {
       "name": "DUDE Token",
       "symbol": "DUDE",
-      "address": "0x3dD4f4C5FA142d828095c558d42CA64a9c251bBA",
-      "chainId": 943,
+      "address": "0xb3f8A3123b608F2957CBC1B584C7066D8f17eE1F",
+      "chainId": 369,
       "decimals": 18,
-      "logoURI": "/images/tokens/0x3dD4f4C5FA142d828095c558d42CA64a9c251bBA.png"
+      "logoURI": "/images/tokens/0xb3f8A3123b608F2957CBC1B584C7066D8f17eE1F.png"
     },
     {
       "name": "FILGOB Token",
       "symbol": "FILGOB",
-      "address": "0xD9c4B292bFdf5A7a8e82c41B9E16f038320aAF11",
-      "chainId": 943,
+      "address": "0x71de02eAdddE87Ee8918DcAF51A4d80Ec21A279E",
+      "chainId": 369,
       "decimals": 18,
-      "logoURI": "/images/tokens/0xD9c4B292bFdf5A7a8e82c41B9E16f038320aAF11.png"
+      "logoURI": "/images/tokens/0x71de02eAdddE87Ee8918DcAF51A4d80Ec21A279E.png"
+    },
+    {
+      "name": "TPA Token",
+      "symbol": "TPA",
+      "address": "0x09157BA936C9512B1aa6efC4775F447292393675",
+      "chainId": 369,
+      "decimals": 18,
+      "logoURI": "/images/tokens/0x09157BA936C9512B1aa6efC4775F447292393675.png"
+    },
+    {
+      "name": "USDC Token",
+      "symbol": "USDC",
+      "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "chainId": 369,
+      "decimals": 18,
+      "logoURI": "/images/tokens/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48.png"
     }
   ]
 }

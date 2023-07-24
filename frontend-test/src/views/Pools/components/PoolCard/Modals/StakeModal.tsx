@@ -120,10 +120,13 @@ const StakeModal: React.FC<StakeModalProps> = ({
   }
 
   const handleConfirmClick = async () => {
+    console.log("arsinoe : handleConfirmClick")
     setPendingTx(true)
 
     if (isRemovingStake) {
       // unstaking
+      console.log("arsinoe : handleConfirmClick unstaking")
+
       try {
         await onUnstake(stakeAmount, stakingToken.decimals)
         toastSuccess(
@@ -139,6 +142,7 @@ const StakeModal: React.FC<StakeModalProps> = ({
         setPendingTx(false)
       }
     } else {
+      console.log("arsinoe : handleConfirmClick staking") 
       try {
         // staking
         await onStake(stakeAmount, stakingToken.decimals)

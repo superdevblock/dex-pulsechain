@@ -6,8 +6,6 @@ import { PairDayDatasResponse } from '../types'
 import { mapPairDayData, fetchChartData } from '../helpers'
 
 const getPoolChartData = async (skip: number, address: string): Promise<{ data?: ChartEntry[]; error: boolean }> => {
-  console.log("arsinoe : getPoolChartData")
-  
   try {
     const query = gql`
       query pairDayDatas($startTime: Int!, $skip: Int!, $address: Bytes!) {
@@ -38,7 +36,6 @@ const getPoolChartData = async (skip: number, address: string): Promise<{ data?:
 }
 
 const fetchPoolChartData = async (address: string): Promise<{ data?: ChartEntry[]; error: boolean }> => {
-  console.log("arsinoe : fetchPoolChartData ", fetchPoolChartData)
   return fetchChartData(getPoolChartData, address)
 }
 

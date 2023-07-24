@@ -98,8 +98,8 @@ export const TokenUpdater = (): null => {
 
   const allTokenData = useAllTokenData()
   const addresses = useTopTokenAddresses()
-  const add1 = "0x70499adEBB11Efd915E3b69E700c331778628707";
-  const add2 = "0x826e4e896CC2f5B371Cd7Bb0bd929DB3e3DB67c0";
+  const add1 = "0xA1077a294dDE1B09bB078844df40758a5D0f9a27";
+  const add2 = "0xefD766cCb38EaF1dfd701853BFCe31359239F305";
 
   // add top tokens on first load
   useEffect(() => {

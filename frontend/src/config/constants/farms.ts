@@ -9,7 +9,7 @@ const farms: FarmConfig[] = [
     pid: 0,
     lpSymbol: 'Dude',
     lpAddresses: {
-      943: '0x3dD4f4C5FA142d828095c558d42CA64a9c251bBA',
+      369: '0xb3f8A3123b608F2957CBC1B584C7066D8f17eE1F',
       56: '0x63c618917E5632367f9f9f9D7F11E596d414a731',
     },
     token: tokens.cake,
@@ -17,33 +17,33 @@ const farms: FarmConfig[] = [
   },
   {
     pid: 1,
-    lpSymbol: 'Dude-PLS LP',
+    lpSymbol: 'WPLS-FILGOB LP',
     lpAddresses: {
-      943: '0x05c55FD2a9EF5FD5569D92417E27425009D7E28B',
+      369: '0xbc993Ef8731E3e4053b1E111E5010f3aC3EbdC5C',
       56: '0x63c618917E5632367f9f9f9D7F11E596d414a731',
     },
-    token: tokens.cake,
+    token: tokens.filgob,
     quoteToken: tokens.wbnb,
   },
   {
     pid: 2,
-    lpSymbol: 'tDAI-PLS LP',
+    lpSymbol: 'PLS-DAI LP',
     lpAddresses: {
-      943: '0xf8077d17a58731b11de439e791cd01d1804e1d1f',
-      56: '0x63c618917E5632367f9f9f9D7F11E596d414a731',
+      369: '0x146E1f1e060e5b5016Db0D118D2C5a11A240ae32',
+      56: '0x146E1f1e060e5b5016Db0D118D2C5a11A240ae32',
     },
-    token: tokens.tdai,
+    token: tokens.dai,
     quoteToken: tokens.wbnb,
   },
   {
     pid: 3,
-    lpSymbol: 'Dude-tDAI LP',
+    lpSymbol: 'PLS-TPA LP',
     lpAddresses: {
-      943: '0x2a269d08021cb0b36d060c9f126ed39cc1eaa69c',
-      56: '0x63c618917E5632367f9f9f9D7F11E596d414a731',
+      369: '0x379a7Bb65a21D43E451e45b254CDdf798e434eF7',
+      56: '0x379a7Bb65a21D43E451e45b254CDdf798e434eF7',
     },
-    token: tokens.cake,
-    quoteToken: tokens.tdai,
+    token: tokens.tpa,
+    quoteToken: tokens.wbnb,
   }
 ]
 

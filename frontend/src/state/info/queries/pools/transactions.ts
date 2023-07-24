@@ -74,16 +74,10 @@ interface TransactionResults {
 }
 
 const fetchPoolTransactions = async (address: string): Promise<{ data?: Transaction[]; error: boolean }> => {
-  console.log("arsinoe: fetchPoolTransactions")
-
   try {
     const data = await request<TransactionResults>(INFO_CLIENT, POOL_TRANSACTIONS, {
       address,
     })
-
-    console.log("arsinoe : fetchPoolTransactions ", data)
-    console.log("arsinoe : fetchPoolTransactions ", POOL_TRANSACTIONS)
-
     const mints = data.mints.map(mapMints)
     const burns = data.burns.map(mapBurns)
     const swaps = data.swaps.map(mapSwaps)

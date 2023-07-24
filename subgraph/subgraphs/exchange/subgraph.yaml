@@ -8,9 +8,9 @@ dataSources:
     name: Factory
     network: pulse
     source:
-      address: "0xFf0538782D122d3112F75dc7121F61562261c0f7"
+      address: "0x29eA7545DEf87022BAdc76323F373EA1e707C523"
       abi: Factory
-      startBlock: 17142286
+      startBlock: 17862488
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4

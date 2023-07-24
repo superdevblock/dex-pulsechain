@@ -48,9 +48,6 @@ const Overview: React.FC = () => {
   const [chartData] = useProtocolChartData()
   const [transactions] = useProtocolTransactions()
 
-  console.log("arsinoe : protocolData ",protocolData)
-  console.log("arsinoe: transactions ", transactions)
-
   const currentDate = new Date().toLocaleString(locale, { month: 'short', year: 'numeric', day: 'numeric' })
 
   // Getting latest liquidity and volumeUSD to display on top of chart when not hovered

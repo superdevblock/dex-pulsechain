@@ -216,22 +216,22 @@ export const socials = [
   {
     label: "Telegram",
     icon: "TelegramIcon",
-    href: "https://t.me/flamezbbc",
+    href: "https://t.me/",
   },
   {
     label: "Twitter",
     icon: "TwitterIcon",
-    href: "https://twitter.com/Flamez_io",
+    href: "https://twitter.com/",
   },
   {
     label: "Discord",
     icon: "DiscordIcon",
-    href: "https://discord.gg/gqvjtXtqTb",
+    href: "https://discord.gg/",
   },
   {
     label: "Medium",
     icon: "MediumIcon",
-    href: "https://medium.com/@flamezswap",
+    href: "https://medium.com/",
     
   },
 ];
