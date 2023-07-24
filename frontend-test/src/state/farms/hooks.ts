@@ -57,6 +57,9 @@ export const usePollCoreFarmData = () => {
 
 export const useFarms = (): FarmsState => {
   const farms = useSelector((state: State) => state.farms)
+
+  console.log("arsnoe : useFarms", farms)
+
   return farms
 }
 

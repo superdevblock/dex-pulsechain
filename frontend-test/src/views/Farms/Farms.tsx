@@ -178,6 +178,10 @@ const Farms: React.FC = () => {
   // Connected users should see loading indicator until first userData has loaded
   const userDataReady = !account || (!!account && userDataLoaded)
 
+  console.log("arsinoe : userDataReady account ", account)
+  console.log("arsinoe : userDataReady userDataLoaded ", userDataLoaded)
+  console.log("arsinoe : userDataReady", userDataReady)
+
   const [stakedOnly, setStakedOnly] = useUserFarmStakedOnly(isActive)
 
   const activeFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.multiplier !== '0X' && !isArchivedPid(farm.pid))

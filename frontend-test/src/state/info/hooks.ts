@@ -52,16 +52,12 @@ export const useProtocolChartData = (): [ChartEntry[] | undefined, (chartData: C
 }
 
 export const useProtocolTransactions = (): [Transaction[] | undefined, (transactions: Transaction[]) => void] => {
-  console.log("arsinoe : useProtocolTransactions ")
   const transactions: Transaction[] | undefined = useSelector((state: AppState) => state.info.protocol.transactions)
   const dispatch = useDispatch<AppDispatch>()
   const setTransactions: (transactions: Transaction[]) => void = useCallback(
     (transactionsData: Transaction[]) => dispatch(updateProtocolTransactions({ transactions: transactionsData })),
     [dispatch],
   )
-
-  console.log("arsinoe : useProtocolTransactions", setTransactions)
-  console.log("arsinoe : transactions ", transactions)
 
   return [transactions, setTransactions]
 }
@@ -111,7 +107,6 @@ export const usePoolDatas = (poolAddresses: string[]): PoolData[] => {
 }
 
 export const usePoolChartData = (address: string): ChartEntry[] | undefined => {
-  console.log("arsinoe : usePoolChartData")
   const dispatch = useDispatch<AppDispatch>()
   const pool = useSelector((state: AppState) => state.info.pools.byAddress[address])
   const chartData = pool?.chartData

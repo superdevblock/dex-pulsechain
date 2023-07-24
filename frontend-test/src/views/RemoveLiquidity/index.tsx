@@ -113,7 +113,7 @@ export default function RemoveLiquidity({
       { name: 'verifyingContract', type: 'address' },
     ]
     const domain = {
-      name: 'Dude LPs',
+      name: 'PulseX LP',
       version: '1',
       chainId,
       verifyingContract: pair.liquidityToken.address,
@@ -146,7 +146,7 @@ export default function RemoveLiquidity({
       .send('eth_signTypedData_v4', [account, data])
       .then(splitSignature)
       .then((signature) => {
-        setSignatureData({
+        setSignatureData({  
           v: signature.v,
           r: signature.r,
           s: signature.s,
@@ -184,7 +184,6 @@ export default function RemoveLiquidity({
     }
     const router = getRouterContract(chainId, library, account)
 
-    console.log("arsinoe : router", router)
 
     const amountsMin = {
       [Field.CURRENCY_A]: calculateSlippageAmount(currencyAmountA, allowedSlippage)[0],
@@ -236,10 +235,8 @@ export default function RemoveLiquidity({
     }
     // we have a signature, use permit versions of remove liquidity
     else if (signatureData !== null) {
-      console.log("arisnoe : function 4")
       // removeLiquidityETHWithPermit
       if (oneCurrencyIsETH) {
-        console.log("arisnoe : function 41")
         methodNames = ['removeLiquidityETHWithPermit', 'removeLiquidityETHWithPermitSupportingFeeOnTransferTokens']
         args = [
           currencyBIsETH ? tokenA.address : tokenB.address,
@@ -253,14 +250,10 @@ export default function RemoveLiquidity({
           signatureData.r,
           signatureData.s,
         ]
-        console.log("arsinoe: function arg", args)
-        console.log("arsinoe : function 42")
       }
       // removeLiquidityETHWithPermit
       else {
-        console.log("arisnoe : function 42")
         methodNames = ['removeLiquidityWithPermit']
-        console.log("arisnoe : function 5")
         args = [
           tokenA.address,
           tokenB.address,
@@ -276,7 +269,6 @@ export default function RemoveLiquidity({
         ]
       }
     } else {
-      console.log("arsinoe : error")
       throw new Error('Attempting to confirm without approval or a signature. Please contact support.')
     }
 

@@ -39,8 +39,8 @@ const farms: FarmConfig[] = [
     pid: 3,
     lpSymbol: 'Dude-tDAI LP',
     lpAddresses: {
-      943: '0x2a269d08021cb0b36d060c9f126ed39cc1eaa69c',
-      56: '0x63c618917E5632367f9f9f9D7F11E596d414a731',
+      943: '0x52E8BAA175FC313c64ecE013635Fc442f0BA2925',
+      56: '0x63c618917E5632367f9f9f9D7F11E596d414a731', 
     },
     token: tokens.cake,
     quoteToken: tokens.tdai,
