@@ -1,5 +1,5 @@
 import { ChainId, JSBI, Percent, Token, WETH } from '@pancakeswap/sdk'
-import { DAI, CAKE, WBNB, tDAI, FILGOB } from './tokens'
+import { DAI, CAKE, WBNB, tDAI, FILGOB, TPA } from './tokens'
 
 export const ROUTER_ADDRESS = '0x636f6407B90661b73b1C0F7e24F4C79f624d0738'
 

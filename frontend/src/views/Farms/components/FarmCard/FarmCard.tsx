@@ -46,11 +46,6 @@ interface FarmCardProps {
 }
 
 const FarmCard: React.FC<FarmCardProps> = ({ farm, displayApr, removed, cakePrice, account }) => {
-  console.log("arsinoe FarmCard : ", farm)
-  console.log("arsinoe FarmCard : ", displayApr)
-  console.log("arsinoe FarmCard : ", removed)
-  console.log("arsinoe FarmCard : ", cakePrice)
-  console.log("arsinoe FarmCard : ", account)
 
   const { t } = useTranslation()
 

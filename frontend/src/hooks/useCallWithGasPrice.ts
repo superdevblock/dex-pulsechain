@@ -13,22 +13,23 @@ import { get } from 'lodash'
  */
 export function useCallWithGasPrice() {
   const gasPrice = useGasPrice()
-
+  
   const callWithGasPrice = useCallback(
     async (
       contract: Contract,
       methodName: string,
       methodArgs: any[] = [],
       overrides: CallOverrides = null,
-    ): Promise<ethers.providers.TransactionResponse> => {
-      const contractMethod = get(contract, methodName)
-      const hasManualGasPriceOverride = overrides?.gasPrice
-
-      const tx = await contractMethod(
-        ...methodArgs,
-        hasManualGasPriceOverride ? { ...overrides } : { ...overrides, gasPrice },
-      )
-
+      ): Promise<ethers.providers.TransactionResponse> => {
+        const contractMethod = get(contract, methodName)
+        const hasManualGasPriceOverride = overrides?.gasPrice
+        
+        const tx = await contractMethod(
+          ...methodArgs,
+          // hasManualGasPriceOverride ? { ...overrides } : { ...overrides, gasPrice },
+          )
+          
+          console.log("Beast useCallWithGasPrice", gasPrice, hasManualGasPriceOverride)
       return tx
     },
     [gasPrice],

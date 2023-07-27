@@ -29,10 +29,10 @@
     {
       "name": "DUDE Token",
       "symbol": "DUDE",
-      "address": "0x3dD4f4C5FA142d828095c558d42CA64a9c251bBA",
+      "address": "0x49126956fC7f873609cb8a7CcEE7775b2d780815",
       "chainId": 943,
       "decimals": 18,
-      "logoURI": "/images/tokens/0x3dD4f4C5FA142d828095c558d42CA64a9c251bBA.png"
+      "logoURI": "/images/tokens/0x49126956fC7f873609cb8a7CcEE7775b2d780815.png"
     },
     {
       "name": "FILGOB Token",
@@ -41,6 +41,14 @@
       "chainId": 943,
       "decimals": 18,
       "logoURI": "/images/tokens/0xD9c4B292bFdf5A7a8e82c41B9E16f038320aAF11.png"
+    },
+    {
+      "name": "TPA Token",
+      "symbol": "TPA",
+      "address": "0x2F55202Cb2C038749D0C028dED539d79318FfE1B",
+      "chainId": 943,
+      "decimals": 18,
+      "logoURI": "/images/tokens/0x2F55202Cb2C038749D0C028dED539d79318FfE1B.png"
     }
   ]
 }

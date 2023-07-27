@@ -58,8 +58,6 @@ export const useProtocolTransactions = (): [Transaction[] | undefined, (transact
     (transactionsData: Transaction[]) => dispatch(updateProtocolTransactions({ transactions: transactionsData })),
     [dispatch],
   )
-  
-  console.log("arsinoe : useProtocolTransactions", setTransactions);
 
   return [transactions, setTransactions]
 }

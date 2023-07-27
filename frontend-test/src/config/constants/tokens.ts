@@ -3,14 +3,14 @@ import { ChainId, Token } from '@pancakeswap/sdk'
 export const CAKE: { [chainId: number]: Token } = {
   [ChainId.MAINNET]: new Token(
     ChainId.MAINNET,
-    '0x3dD4f4C5FA142d828095c558d42CA64a9c251bBA',
+    '0x49126956fC7f873609cb8a7CcEE7775b2d780815',
     18,
     'DUDE',
     'DUDE',
   ),
   [ChainId.TESTNET]: new Token(
     ChainId.TESTNET,
-    '0x3dD4f4C5FA142d828095c558d42CA64a9c251bBA',
+    '0x49126956fC7f873609cb8a7CcEE7775b2d780815',
     18,
     'DUDE',
     'DUDE',
@@ -35,7 +35,7 @@ export const BUSD: { [chainId: number]: Token } = {
 
 ///
 export const GOT = new Token(ChainId.MAINNET, '0x3Fa2b39471Af5d82bd7107a995FEE4C580ad723C', 18, 'GOT', 'GOT Token')
-export const Dude = new Token(ChainId.MAINNET, '0x3dD4f4C5FA142d828095c558d42CA64a9c251bBA', 18, 'DUDE', 'DUDE')
+export const Dude = new Token(ChainId.MAINNET, '0x49126956fC7f873609cb8a7CcEE7775b2d780815', 18, 'DUDE', 'DUDE')
 ///
 
 export const WBNB = new Token(ChainId.MAINNET, '0x70499adEBB11Efd915E3b69E700c331778628707', 18, 'WBNB', 'Wrapped BNB')
@@ -43,6 +43,7 @@ export const DAI = new Token(ChainId.MAINNET, '0x1AF3F329e8BE154074D8769D1FFa4eE
 export const USDT = new Token(ChainId.MAINNET, '0x55f6e29e5e11d972507f17fc41a8d8FC19eD0cD5', 18, 'USDT', 'Tether USD')
 export const tDAI = new Token(ChainId.MAINNET, '0x826e4e896CC2f5B371Cd7Bb0bd929DB3e3DB67c0', 18, 'tDAI', 'tDAI Token')
 export const FILGOB = new Token(ChainId.MAINNET, '0x71de02eAdddE87Ee8918DcAF51A4d80Ec21A279E', 18, 'FILGOB', 'FILGOB Token')
+export const TPA = new Token(ChainId.MAINNET, '0x2F55202Cb2C038749D0C028dED539d79318FfE1B', 18, 'TPA', 'TPA Token')
 export const BTCB = new Token(ChainId.MAINNET, '0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c', 18, 'BTCB', 'Binance BTC')
 export const UST = new Token(
   ChainId.MAINNET,
@@ -75,7 +76,7 @@ const tokens = {
     symbol: 'Dude',
     address: {
       56: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82',
-      943: '0x3dD4f4C5FA142d828095c558d42CA64a9c251bBA',
+      943: '0x49126956fC7f873609cb8a7CcEE7775b2d780815',
     },
     decimals: 18,
     projectLink: 'https://dude.io/',
@@ -706,6 +707,15 @@ const tokens = {
     address: {
       56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
       943: '0x70499adEBB11Efd915E3b69E700c331778628707',
+    },
+    decimals: 18,
+    projectLink: 'https://dude.io/',
+  },
+  tpa: {
+    symbol: 'TPA',
+    address: {
+      56: '',
+      943: '0x2F55202Cb2C038749D0C028dED539d79318FfE1B',
     },
     decimals: 18,
     projectLink: 'https://dude.io/',

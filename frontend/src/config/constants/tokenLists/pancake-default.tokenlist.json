@@ -41,22 +41,6 @@
       "chainId": 369,
       "decimals": 18,
       "logoURI": "/images/tokens/0x71de02eAdddE87Ee8918DcAF51A4d80Ec21A279E.png"
-    },
-    {
-      "name": "TPA Token",
-      "symbol": "TPA",
-      "address": "0x09157BA936C9512B1aa6efC4775F447292393675",
-      "chainId": 369,
-      "decimals": 18,
-      "logoURI": "/images/tokens/0x09157BA936C9512B1aa6efC4775F447292393675.png"
-    },
-    {
-      "name": "USDC Token",
-      "symbol": "USDC",
-      "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      "chainId": 369,
-      "decimals": 18,
-      "logoURI": "/images/tokens/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48.png"
     }
   ]
 }

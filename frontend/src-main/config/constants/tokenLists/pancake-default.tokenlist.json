@@ -1,0 +1,62 @@
+{
+  "name": "PancakeSwap Default List",
+  "timestamp": "2021-05-06T00:00:00Z",
+  "version": {
+    "major": 3,
+    "minor": 0,
+    "patch": 0
+  },
+  "tags": {},
+  "logoURI": "/logo.png",
+  "keywords": ["pancake", "default"],
+  "tokens": [
+    {
+      "name": "WPLS Token",
+      "symbol": "WPLS",
+      "address": "0xA1077a294dDE1B09bB078844df40758a5D0f9a27",
+      "chainId": 369,
+      "decimals": 18,
+      "logoURI": "/images/tokens/0xA1077a294dDE1B09bB078844df40758a5D0f9a27.png"
+    },
+    {
+      "name": "DAI Token",
+      "symbol": "DAI",
+      "address": "0xefD766cCb38EaF1dfd701853BFCe31359239F305",
+      "chainId": 369,
+      "decimals": 18,
+      "logoURI": "/images/tokens/0xefD766cCb38EaF1dfd701853BFCe31359239F305.png"
+    },
+    {
+      "name": "DUDE Token",
+      "symbol": "DUDE",
+      "address": "0xb3f8A3123b608F2957CBC1B584C7066D8f17eE1F",
+      "chainId": 369,
+      "decimals": 18,
+      "logoURI": "/images/tokens/0xb3f8A3123b608F2957CBC1B584C7066D8f17eE1F.png"
+    },
+    {
+      "name": "FILGOB Token",
+      "symbol": "FILGOB",
+      "address": "0x71de02eAdddE87Ee8918DcAF51A4d80Ec21A279E",
+      "chainId": 369,
+      "decimals": 18,
+      "logoURI": "/images/tokens/0x71de02eAdddE87Ee8918DcAF51A4d80Ec21A279E.png"
+    },
+    {
+      "name": "TPA Token",
+      "symbol": "TPA",
+      "address": "0x09157BA936C9512B1aa6efC4775F447292393675",
+      "chainId": 369,
+      "decimals": 18,
+      "logoURI": "/images/tokens/0x09157BA936C9512B1aa6efC4775F447292393675.png"
+    },
+    {
+      "name": "USDC Token",
+      "symbol": "USDC",
+      "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "chainId": 369,
+      "decimals": 18,
+      "logoURI": "/images/tokens/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48.png"
+    }
+  ]
+}

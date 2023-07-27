@@ -1,5 +1,5 @@
 import { ChainId, JSBI, Percent, Token, WETH } from '@pancakeswap/sdk'
-import { DAI, CAKE, WBNB, FILGOB, TPA } from './tokens'
+import { DAI, CAKE, WBNB, FILGOB } from './tokens'
 
 export const ROUTER_ADDRESS = '0x165C3410fC91EF562C50559f7d2289fEbed552d9'
 
@@ -10,7 +10,7 @@ type ChainTokenList = {
 
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
-  [ChainId.MAINNET]: [WETH[ChainId.MAINNET], CAKE[ChainId.MAINNET], DAI, TPA],
+  [ChainId.MAINNET]: [WETH[ChainId.MAINNET], CAKE[ChainId.MAINNET], DAI, ],
   [ChainId.TESTNET]: [WETH[ChainId.TESTNET], CAKE[ChainId.TESTNET] ],
 }
 

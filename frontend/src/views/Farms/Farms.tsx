@@ -145,8 +145,6 @@ const getDisplayApr = (cakeRewardsApr?: number, lpRewardsApr?: number) => {
 }
 
 const Farms: React.FC = () => {
-  console.log("arsinoe : -------------------------------------------")
-
   const { path } = useRouteMatch()
   const { pathname } = useLocation()
   const { t } = useTranslation()
@@ -282,8 +280,6 @@ const Farms: React.FC = () => {
 
   chosenFarmsLength.current = chosenFarmsMemoized.length
 
-  console.log("arsinoe : chosenFarmsMemoized ", chosenFarmsMemoized)
-
   useEffect(() => {
     const showMoreFarms = (entries) => {
       const [entry] = entries
@@ -307,15 +303,11 @@ const Farms: React.FC = () => {
     }
   }, [chosenFarmsMemoized, observerIsSet])
 
-  console.log("arsinoe : observerIsSet ", observerIsSet)
-
   const rowData = chosenFarmsMemoized.map((farm) => {
     const { token, quoteToken } = farm
     const tokenAddress = token.address
     const quoteTokenAddress = quoteToken.address
     const lpLabel = farm.lpSymbol && farm.lpSymbol.split(' ')[0].toUpperCase().replace('PANCAKE', '')
-
-    console.log("arsinoe : farm.apr, farm.lpRewardsApr ", farm.apr, farm.lpRewardsApr)
 
     const row: RowProps = {
       apr: {
@@ -350,8 +342,6 @@ const Farms: React.FC = () => {
 
     return row
   })
-
-  console.log("arsinoe : rowData ", rowData)
 
   const renderContent = (): JSX.Element => {
     if (viewMode === ViewMode.TABLE && rowData.length) {
@@ -424,13 +414,9 @@ const Farms: React.FC = () => {
     )
   }
 
-  console.log("arsinoe : renderContent ", renderContent)
-
   const handleSortOptionChange = (option: OptionProps): void => {
     setSortOption(option.value)
   }
-
-  console.log("arsinoe : handleSortOptionChange ", handleSortOptionChange)
 
   return (
     <>      

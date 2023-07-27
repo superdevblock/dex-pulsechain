@@ -41,9 +41,12 @@ const useStakePool = (sousId: number, isUsingBnb = false) => {
   const sousChefContract = useSousChef(sousId)
   const [userReferral, setReferral] = useReferralManager()
 
-  const handleStake = useCallback(
+  const handleStake = useCallback(   
     async (amount: string, decimals: number) => {
+
+    console.log("arinose : handleStake sousId : ", sousId)
       if (sousId === 0) {
+        console.log(masterChefContract, 0, amount, userReferral)
         await stakeFarm(masterChefContract, 0, amount, userReferral)
       } else if (isUsingBnb) {
         await sousStakeBnb(sousChefContract, amount)

@@ -67,11 +67,16 @@ const Staked: React.FunctionComponent<StackedActionProps> = ({
   const addLiquidityUrl = `${BASE_ADD_LIQUIDITY_URL}/${liquidityUrlPathParts}`
 
   const handleStake = async (amount: string) => {
+    console.log("arsinoe : handleStake")
     await onStake(amount, userReferral)
     dispatch(fetchFarmUserDataAsync({ account, pids: [pid] }))
   }
 
   const handleUnstake = async (amount: string) => {
+    console.log("arsinoe : handleUnstake 2")
+    console.log("arsinoe : userReferral ", userReferral)
+    console.log("arsinoe : account ", account)
+    console.log("arsinoe : pid ", [pid])
     await onUnstake(amount, userReferral)
     dispatch(fetchFarmUserDataAsync({ account, pids: [pid] }))
   }
@@ -204,7 +209,6 @@ const Staked: React.FunctionComponent<StackedActionProps> = ({
   }
 
   if (!userDataReady) {
-    console.log("arsinoe farming : start 2")
     return (
       <ActionContainer>
         <ActionTitles>

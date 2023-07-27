@@ -122,7 +122,6 @@ const Staked: React.FunctionComponent<StackedActionProps> = ({
   }, [onApprove, dispatch, account, pid])
 
   if (!account) {
-    console.log("arsinoe farming : start")
     return (
       <ActionContainer>
         <ActionTitles>
@@ -205,7 +204,6 @@ const Staked: React.FunctionComponent<StackedActionProps> = ({
   }
 
   if (!userDataReady) {
-    console.log("arsinoe farming : start 2")
     return (
       <ActionContainer>
         <ActionTitles>
@@ -222,6 +220,7 @@ const Staked: React.FunctionComponent<StackedActionProps> = ({
 
   return (
     <ActionContainer> 
+      
       <ActionTitles>
         <Text bold textTransform="uppercase" color="textSubtle" fontSize="12px">
           {t('Enable Farm')}
