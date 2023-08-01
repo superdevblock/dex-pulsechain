@@ -12,7 +12,7 @@ const farms: FarmConfig[] = [
       943: '0x49126956fC7f873609cb8a7CcEE7775b2d780815',
       56: '0x63c618917E5632367f9f9f9D7F11E596d414a731',
     },
-    token: tokens.cake,
+    token: tokens.cake,                                      
     quoteToken: tokens.wbnb,
   },
   {
@@ -25,16 +25,16 @@ const farms: FarmConfig[] = [
     token: tokens.cake,
     quoteToken: tokens.wbnb,
   },
-  {
-    pid: 2,
-    lpSymbol: 'tDAI-PLS LP',
-    lpAddresses: {
-      943: '0xf8077D17A58731b11de439e791Cd01d1804e1d1F',
-      56: '0x63c618917E5632367f9f9f9D7F11E596d414a731',
-    },
-    token: tokens.tdai,
-    quoteToken: tokens.wbnb,
-  },
+  // {
+  //   pid: 2,
+  //   lpSymbol: 'tDAI-PLS LP',
+  //   lpAddresses: {
+  //     943: '0xf8077D17A58731b11de439e791Cd01d1804e1d1F',
+  //     56: '0x63c618917E5632367f9f9f9D7F11E596d414a731',
+  //   },
+  //   token: tokens.tdai,
+  //   quoteToken: tokens.wbnb,
+  // },
   {
     pid: 3,
     lpSymbol: 'Dude-tDAI LP',

@@ -15,7 +15,7 @@ import PageLoader from './components/Loader/PageLoader'
 import EasterEgg from './components/EasterEgg'
 import history from './routerHistory'
 // Views included in the main bundle
-import Pools from './views/Pools'
+// import Pools from './views/Pools'
 import Swap from './views/Swap'
 import {
   RedirectDuplicateTokenIds,
@@ -83,9 +83,9 @@ const App: React.FC = () => {
             <Route path="/farms">
               <Farms />
             </Route>
-            <Route path="/pools">
+            {/* <Route path="/pools">
               <Pools />
-            </Route>
+            </Route> */}
             <Route path="/referral">
               <Referral />
             </Route>
@@ -149,12 +149,12 @@ const App: React.FC = () => {
             <Route path="/pool">
               <Redirect to="/liquidity" />
             </Route>
-            <Route path="/staking">
+            {/* <Route path="/staking">
               <Redirect to="/pools" />
-            </Route>
-            <Route path="/syrup">
+            </Route> */}
+            {/* <Route path="/syrup">
               <Redirect to="/pools" />
-            </Route>
+            </Route> */}
             <Route path="/nft">
               <Redirect to="/collectibles" />
             </Route>

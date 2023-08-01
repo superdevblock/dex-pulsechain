@@ -45,26 +45,26 @@ const farms: FarmConfig[] = [
     token: tokens.tpa,
     quoteToken: tokens.wbnb,
   },
-  // {
-  //   pid: 4,
-  //   lpSymbol: 'TPA-DAI LP',
-  //   lpAddresses: {
-  //     369: '0x379a7Bb65a21D43E451e45b254CDdf798e434eF7',
-  //     56: '0x379a7Bb65a21D43E451e45b254CDdf798e434eF7',
-  //   },
-  //   token: tokens.dai,
-  //   quoteToken: tokens.tpa,
-  // },
-  // {
-  //   pid: 5,
-  //   lpSymbol: 'FILGOB-DAI LP',
-  //   lpAddresses: {
-  //     369: '0x379a7Bb65a21D43E451e45b254CDdf798e434eF7',
-  //     56: '0x379a7Bb65a21D43E451e45b254CDdf798e434eF7',
-  //   },
-  //   token: tokens.dai,
-  //   quoteToken: tokens.filgob,  
-  // }
+  {
+    pid: 4,
+    lpSymbol: 'TPA-DAI LP',
+    lpAddresses: {
+      369: '0x0554743b9d7Fe5E15d11DB1a6cdf20e2CcB28609',
+      56: '0x379a7Bb65a21D43E451e45b254CDdf798e434eF7',
+    },
+    token: tokens.dai,
+    quoteToken: tokens.tpa,
+  },
+  {
+    pid: 5,
+    lpSymbol: 'FILGOB-DAI LP',
+    lpAddresses: {
+      369: '0x0A62a082884dBE9Ea4a84F26DAca432e9E3E9Bd4',
+      56: '0x379a7Bb65a21D43E451e45b254CDdf798e434eF7',
+    },
+    token: tokens.dai,
+    quoteToken: tokens.filgob,  
+  }
 ]
 
 export default farms
