@@ -345,12 +345,12 @@ export default function Swap({ history }: RouteComponentProps) {
   return (
     <Page>
       <ButtonMenu activeIndex={clickIndex1} onItemClick={handleClick} scale="md" variant="primary" marginBottom="20px">
-             <ButtonMenuItem as={Link} to={`${url}`}>
-               {t('Swap')}
-             </ButtonMenuItem>
-             <ButtonMenuItem as={Link} to="/liquidity">
-               {t('Liquidity')}
-             </ButtonMenuItem>
+        <ButtonMenuItem as={Link} to={`${url}`}>
+          {t('Swap')}
+        </ButtonMenuItem>
+        <ButtonMenuItem as={Link} to="/liquidity">
+          {t('Liquidity')}
+        </ButtonMenuItem>
       </ButtonMenu>
       <SwapBody>
         <AppHeader title={t('Exchange')} subtitle={t('Trade tokens in an instant')} />
